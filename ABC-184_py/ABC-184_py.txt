@@ -1,0 +1,31 @@
+<ABC-184>
+
+~~A~~
+a, b = input().split()
+c, d = input().split()
+
+answer = int(a) * int(d) - int(b) * int(c)
+
+print(answer)
+
+
+
+~~B~~
+n, x = input().split()
+s = input()
+
+result_list = list(s)
+
+for i in range(int(n)):
+  if int(x) == 0:
+    if result_list[i] == "x":
+      x = 0
+    elif result_list[i] == "o":
+      x = int(x) + 1
+  else:
+    if result_list[i] == "x":
+      x = int(x) - 1
+    elif result_list[i] == "o":
+      x = int(x) + 1
+    
+print(x)

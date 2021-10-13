@@ -1,0 +1,41 @@
+<ABC-187>
+
+~~A~~
+a, b = list (input().split())
+
+asum = 0
+bsum = 0
+
+for i in range(len(a)):
+  asum = asum + int(a[i])
+
+for j in range(len(b)):
+  bsum = bsum + int(b[j])
+
+if asum >= bsum:
+  print(asum)
+elif asum < bsum:
+  print(bsum)
+
+~~B~~
+n = input()
+l = list()
+sum = 0
+
+for i in range(int(n)):
+  l.append(input().split())
+
+j = 0
+while j < int(n) - 1:
+  k = j + 1
+  while k < int(n):
+    answer = (int(l[j][1]) - int(l[k][1])) / (int(l[j][0]) - int(l[k][0]))
+    if answer >= -1 and answer <= 1:
+      sum = sum + 1
+    k = k + 1
+  j = j + 1
+
+if int(n) == 1:
+  print(0)
+else:
+  print(sum)

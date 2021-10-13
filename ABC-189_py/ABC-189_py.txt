@@ -1,0 +1,31 @@
+<ABC-189>
+
+~~A~~
+l = list(input())
+
+if l[0] == l[1] and l[1] == l[2]:
+  print('Won')
+else:
+  print('Lost')
+
+
+
+
+~~B~~
+n, x = input().split()
+
+answer = 0
+flg = 0
+
+for i in range(int(n)):
+  a, b = input().split()
+  
+  answer = answer + int(a) * int(b)
+  print(answer)
+  if answer > int(x) * 100:
+    flg = flg + 1
+    print(i + 1)
+    break
+    
+if flg == 0:
+  print('-1')

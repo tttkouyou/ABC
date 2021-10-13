@@ -1,0 +1,65 @@
+<ABC-188>
+
+~~A~~
+x, y = input().split()
+
+hikui = 0
+takai = 0
+
+if int(x) < int(y):
+  hikui = int(x)
+  takai = int(y)
+else :
+  hikui = int(y)
+  takai = int(x)
+  
+if hikui + 3 > takai:
+  print("Yes")
+else:
+  print("No")
+
+
+
+
+~~B~~
+n = input()
+
+la = input().split()
+
+lb = input().split()
+
+answer = 0
+for i in range(int(n)):
+  answer = answer + int(la[i]) * int(lb[i])
+
+if(answer == 0):
+  print("Yes")
+else:
+  print("No")
+
+
+
+
+~C~NOT-COMPLETE
+n = input()
+l = input().split()
+
+answerl = []
+max = 0
+for i in range(2):
+  for j in range(0, 2 ** (int(n)), int((2 ** (int(n)))/2) - 1):
+    for k in range(0, int(2 ** (int(n))/2), +2):
+      if l[k] < l[k + 1]:
+        max = l[k + 1]
+      else:
+        max = l[k]
+    answerl.append(max)
+  if answerl[0] < answerl[1]:
+    answer = answerl[0]
+  else:
+    answer = answerl[1]
+
+for m in range(2 ** (int(n))):
+  if(int(l[m]) == answer):
+    print(m)
+  

@@ -1,0 +1,16 @@
+<ABC-141>
+
+~~C~~
+n, k, q = input().split()
+
+challenger = [int(k) - int(q)] * int(n)
+
+for i in range(int(q)):
+  answerer = int(input())
+  challenger[answerer - 1] += 1 
+  
+for j in range(int(n)):
+  if challenger[j] <= 0:
+    print("No")
+  else:
+    print("Yes")

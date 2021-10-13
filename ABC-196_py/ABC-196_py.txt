@@ -1,0 +1,43 @@
+<ABC-196>
+
+~~A~~
+a ,b = input().split()
+c, d = input().split()
+
+print(int(b) - int(c))
+
+
+~~B~~
+import math
+
+x = input()
+answerList = list(x)
+
+answer = ''
+
+if '.' in answerList:
+  pointIndex = answerList.index('.')
+  for i in range(pointIndex):
+    answer += answerList[i]
+  print(answer)
+else:
+  print(int(x))
+
+
+~C~NOT-COMPLETE
+x = input()
+
+xList = list(x)
+xLen = len(xList)
+
+xListL = []
+xListR = []
+
+if xLen % 2 == 0:
+  for i in range(int(xLen/2)):
+    xListL.append(xList[i])
+    xListR.append(xList[i + (int(xLen/2))])
+  print(xListL)
+  print(xListR)
+else:
+  print("0")

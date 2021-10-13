@@ -1,0 +1,24 @@
+<ABC-182>
+
+~~B~~
+n = input()
+
+array = input().split()
+
+array2 =[0] * 998
+
+for num in range(998):
+	for i in array:
+		if int(i) % (num + 2) == 0:
+			array2[num] = array2[num] + 1
+	if num == 998:
+		break
+
+max = 0
+for j in range(998):
+	if array2[int(j)] >= array2[max]:
+		max = j
+	elif array2[int(j)] <= array2[max]:
+		max = max
+
+print(max + 2)

@@ -1,0 +1,12 @@
+<ABC-183>
+
+~~B~~
+Sx, Sy, Gx, Gy = input().split()
+
+wariAns = (int(Gy) + int(Sy)) / int(Sy)
+
+Ans = (float(Gx) - float(Sx)) / float(wariAns)
+
+Ans = float(Ans) + float(Sx)
+
+print(float(Ans))
